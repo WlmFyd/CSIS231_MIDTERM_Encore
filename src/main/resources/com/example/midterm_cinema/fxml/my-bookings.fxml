@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<VBox
+    xmlns="http://javafx.com/javafx/17"
+    xmlns:fx="http://javafx.com/fxml/1"
+    spacing="22"
+    styleClass="page, app-root"
+    fx:controller="com.example.midterm_cinema.controller.MyBookingsController"
+    stylesheets="@../css/theme.css"
+    prefWidth="1180"
+    prefHeight="740">
+    <Label text="YOUR MOVIE NIGHTS" styleClass="eyebrow"/>
+    <Label text="My bookings" styleClass="section-title"/>
+    <Label fx:id="statusLabel" styleClass="muted"/>
+    <ListView fx:id="bookingsList" VBox.vgrow="ALWAYS"/>
+</VBox>

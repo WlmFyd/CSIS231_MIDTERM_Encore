@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<ScrollPane
+    xmlns="http://javafx.com/javafx/17"
+    xmlns:fx="http://javafx.com/fxml/1"
+    fitToWidth="true"
+    hbarPolicy="NEVER"
+    fx:controller="com.example.midterm_cinema.controller.MovieBrowserController"
+    stylesheets="@../css/theme.css"
+    styleClass="app-root"
+    prefWidth="1180"
+    prefHeight="740">
+    <content>
+        <VBox spacing="26" styleClass="page">
+            <VBox spacing="12" styleClass="hero">
+                <Label text="THE BIG SCREEN IS CALLING" styleClass="eyebrow"/>
+                <Label text="A story worth stepping out for." styleClass="hero-title" wrapText="true"/>
+                <Label text="Find your next favorite film. We'll save you a seat." styleClass="muted" wrapText="true"/>
+            </VBox>
+            <HBox spacing="14" alignment="CENTER_LEFT">
+                <Label text="Now showing" styleClass="section-title"/>
+                <Region HBox.hgrow="ALWAYS"/>
+                <TextField fx:id="searchField" promptText="Search movies..." prefWidth="230"/>
+                <ComboBox fx:id="genreFilter" prefWidth="160"/>
+                <Button fx:id="reloadButton" text="Refresh" onAction="#reload" styleClass="outline-button"/>
+            </HBox>
+            <Label fx:id="statusLabel" wrapText="true" styleClass="muted"/>
+            <TilePane fx:id="movieGrid" hgap="22" vgap="24" prefTileWidth="250" prefColumns="4" alignment="TOP_LEFT">
+                <!-- A design-time sample. The controller fills this pane from the database. -->
+                <fx:include source="movie-card.fxml"/>
+            </TilePane>
+            <Label text="A LITTLE ESCAPE. A GREAT EXPERIENCE. ENCORE." styleClass="eyebrow"/>
+        </VBox>
+    </content>
+</ScrollPane>

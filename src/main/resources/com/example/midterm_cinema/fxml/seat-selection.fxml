@@ -1,0 +1,357 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<ScrollPane
+    xmlns="http://javafx.com/javafx/17"
+    xmlns:fx="http://javafx.com/fxml/1"
+    fitToWidth="true"
+    hbarPolicy="NEVER"
+    fx:controller="com.example.midterm_cinema.controller.SeatSelectionController"
+    stylesheets="@../css/theme.css"
+    styleClass="app-root"
+    prefWidth="1180"
+    prefHeight="740">
+    <content>
+        <VBox spacing="20" styleClass="page">
+            <Button text="← Screening details" onAction="#back" styleClass="nav-button"/>
+            <Label fx:id="titleLabel" text="Choose your seats" styleClass="section-title"/>
+            <Label fx:id="screeningLabel" text="Screening time • Room" styleClass="muted" wrapText="true"/>
+            <HBox spacing="24" alignment="TOP_LEFT">
+                <VBox spacing="22" styleClass="panel" HBox.hgrow="ALWAYS" alignment="TOP_CENTER">
+                    <Label text="S C R E E N" maxWidth="Infinity" alignment="CENTER" styleClass="screen"/>
+                    <GridPane fx:id="seatGrid" hgap="7" vgap="10" alignment="CENTER">
+                        <!-- Preview layout. The controller recreates these seats using database availability. -->
+                        <Region minWidth="18" GridPane.columnIndex="6"/>
+                        <Label text="A" styleClass="muted" GridPane.rowIndex="0"/>
+                        <ToggleButton
+                            text="A1"
+                            styleClass="seat, seat-normal"
+                            GridPane.columnIndex="1"
+                            GridPane.rowIndex="0"/>
+                        <ToggleButton
+                            text="A2"
+                            styleClass="seat, seat-normal"
+                            GridPane.columnIndex="2"
+                            GridPane.rowIndex="0"/>
+                        <ToggleButton
+                            text="A3"
+                            styleClass="seat, seat-normal"
+                            GridPane.columnIndex="3"
+                            GridPane.rowIndex="0"/>
+                        <ToggleButton
+                            text="A4"
+                            styleClass="seat, seat-normal"
+                            GridPane.columnIndex="4"
+                            GridPane.rowIndex="0"/>
+                        <ToggleButton
+                            text="A5"
+                            styleClass="seat, seat-normal"
+                            GridPane.columnIndex="5"
+                            GridPane.rowIndex="0"/>
+                        <ToggleButton
+                            text="A6"
+                            styleClass="seat, seat-normal"
+                            GridPane.columnIndex="7"
+                            GridPane.rowIndex="0"/>
+                        <ToggleButton
+                            text="A7"
+                            styleClass="seat, seat-normal"
+                            GridPane.columnIndex="8"
+                            GridPane.rowIndex="0"/>
+                        <ToggleButton
+                            text="A8"
+                            styleClass="seat, seat-normal"
+                            GridPane.columnIndex="9"
+                            GridPane.rowIndex="0"/>
+                        <ToggleButton
+                            text="A9"
+                            styleClass="seat, seat-normal"
+                            GridPane.columnIndex="10"
+                            GridPane.rowIndex="0"/>
+                        <ToggleButton
+                            text="A10"
+                            styleClass="seat, seat-normal"
+                            GridPane.columnIndex="11"
+                            GridPane.rowIndex="0"/>
+                        <Label text="B" styleClass="muted" GridPane.rowIndex="1"/>
+                        <ToggleButton
+                            text="B1"
+                            styleClass="seat, seat-normal"
+                            GridPane.columnIndex="1"
+                            GridPane.rowIndex="1"/>
+                        <ToggleButton
+                            text="B2"
+                            styleClass="seat, seat-normal"
+                            GridPane.columnIndex="2"
+                            GridPane.rowIndex="1"/>
+                        <ToggleButton
+                            text="B3"
+                            styleClass="seat, seat-normal"
+                            GridPane.columnIndex="3"
+                            GridPane.rowIndex="1"/>
+                        <ToggleButton
+                            text="B4"
+                            styleClass="seat, seat-normal"
+                            GridPane.columnIndex="4"
+                            GridPane.rowIndex="1"/>
+                        <ToggleButton
+                            text="B5"
+                            styleClass="seat, seat-normal"
+                            GridPane.columnIndex="5"
+                            GridPane.rowIndex="1"/>
+                        <ToggleButton
+                            text="B6"
+                            styleClass="seat, seat-normal"
+                            GridPane.columnIndex="7"
+                            GridPane.rowIndex="1"/>
+                        <ToggleButton
+                            text="B7"
+                            styleClass="seat, seat-normal"
+                            GridPane.columnIndex="8"
+                            GridPane.rowIndex="1"/>
+                        <ToggleButton
+                            text="B8"
+                            styleClass="seat, seat-normal"
+                            GridPane.columnIndex="9"
+                            GridPane.rowIndex="1"/>
+                        <ToggleButton
+                            text="B9"
+                            styleClass="seat, seat-normal"
+                            GridPane.columnIndex="10"
+                            GridPane.rowIndex="1"/>
+                        <ToggleButton
+                            text="B10"
+                            styleClass="seat, seat-normal"
+                            GridPane.columnIndex="11"
+                            GridPane.rowIndex="1"/>
+                        <Label text="C" styleClass="muted" GridPane.rowIndex="2"/>
+                        <ToggleButton
+                            text="C1"
+                            styleClass="seat, seat-normal"
+                            GridPane.columnIndex="1"
+                            GridPane.rowIndex="2"/>
+                        <ToggleButton
+                            text="C2"
+                            styleClass="seat, seat-normal"
+                            GridPane.columnIndex="2"
+                            GridPane.rowIndex="2"/>
+                        <ToggleButton
+                            text="C3"
+                            styleClass="seat, seat-normal"
+                            GridPane.columnIndex="3"
+                            GridPane.rowIndex="2"/>
+                        <ToggleButton
+                            text="C4"
+                            styleClass="seat, seat-normal"
+                            GridPane.columnIndex="4"
+                            GridPane.rowIndex="2"/>
+                        <ToggleButton
+                            text="C5"
+                            styleClass="seat, seat-normal"
+                            GridPane.columnIndex="5"
+                            GridPane.rowIndex="2"/>
+                        <ToggleButton
+                            text="C6"
+                            styleClass="seat, seat-normal"
+                            GridPane.columnIndex="7"
+                            GridPane.rowIndex="2"/>
+                        <ToggleButton
+                            text="C7"
+                            styleClass="seat, seat-normal"
+                            GridPane.columnIndex="8"
+                            GridPane.rowIndex="2"/>
+                        <ToggleButton
+                            text="C8"
+                            styleClass="seat, seat-normal"
+                            GridPane.columnIndex="9"
+                            GridPane.rowIndex="2"/>
+                        <ToggleButton
+                            text="C9"
+                            styleClass="seat, seat-normal"
+                            GridPane.columnIndex="10"
+                            GridPane.rowIndex="2"/>
+                        <ToggleButton
+                            text="C10"
+                            styleClass="seat, seat-normal"
+                            GridPane.columnIndex="11"
+                            GridPane.rowIndex="2"/>
+                        <Label text="D" styleClass="muted" GridPane.rowIndex="3"/>
+                        <ToggleButton
+                            text="D1"
+                            styleClass="seat, seat-normal"
+                            GridPane.columnIndex="1"
+                            GridPane.rowIndex="3"/>
+                        <ToggleButton
+                            text="D2"
+                            styleClass="seat, seat-normal"
+                            GridPane.columnIndex="2"
+                            GridPane.rowIndex="3"/>
+                        <ToggleButton
+                            text="D3"
+                            styleClass="seat, seat-normal"
+                            GridPane.columnIndex="3"
+                            GridPane.rowIndex="3"/>
+                        <ToggleButton
+                            text="D4"
+                            styleClass="seat, seat-normal"
+                            GridPane.columnIndex="4"
+                            GridPane.rowIndex="3"/>
+                        <ToggleButton
+                            text="D5"
+                            styleClass="seat, seat-normal"
+                            GridPane.columnIndex="5"
+                            GridPane.rowIndex="3"/>
+                        <ToggleButton
+                            text="D6"
+                            styleClass="seat, seat-normal"
+                            GridPane.columnIndex="7"
+                            GridPane.rowIndex="3"/>
+                        <ToggleButton
+                            text="D7"
+                            styleClass="seat, seat-normal"
+                            GridPane.columnIndex="8"
+                            GridPane.rowIndex="3"/>
+                        <ToggleButton
+                            text="D8"
+                            styleClass="seat, seat-normal"
+                            GridPane.columnIndex="9"
+                            GridPane.rowIndex="3"/>
+                        <ToggleButton
+                            text="D9"
+                            styleClass="seat, seat-normal"
+                            GridPane.columnIndex="10"
+                            GridPane.rowIndex="3"/>
+                        <ToggleButton
+                            text="D10"
+                            styleClass="seat, seat-normal"
+                            GridPane.columnIndex="11"
+                            GridPane.rowIndex="3"/>
+                        <Label text="E" styleClass="muted" GridPane.rowIndex="4"/>
+                        <ToggleButton
+                            text="E1"
+                            styleClass="seat, seat-vip"
+                            GridPane.columnIndex="1"
+                            GridPane.rowIndex="4"/>
+                        <ToggleButton
+                            text="E2"
+                            styleClass="seat, seat-vip"
+                            GridPane.columnIndex="2"
+                            GridPane.rowIndex="4"/>
+                        <ToggleButton
+                            text="E3"
+                            styleClass="seat, seat-vip"
+                            GridPane.columnIndex="3"
+                            GridPane.rowIndex="4"/>
+                        <ToggleButton
+                            text="E4"
+                            styleClass="seat, seat-vip"
+                            GridPane.columnIndex="4"
+                            GridPane.rowIndex="4"/>
+                        <ToggleButton
+                            text="E5"
+                            styleClass="seat, seat-vip"
+                            GridPane.columnIndex="5"
+                            GridPane.rowIndex="4"/>
+                        <ToggleButton
+                            text="E6"
+                            styleClass="seat, seat-vip"
+                            GridPane.columnIndex="7"
+                            GridPane.rowIndex="4"/>
+                        <ToggleButton
+                            text="E7"
+                            styleClass="seat, seat-vip"
+                            GridPane.columnIndex="8"
+                            GridPane.rowIndex="4"/>
+                        <ToggleButton
+                            text="E8"
+                            styleClass="seat, seat-vip"
+                            GridPane.columnIndex="9"
+                            GridPane.rowIndex="4"/>
+                        <ToggleButton
+                            text="E9"
+                            styleClass="seat, seat-vip"
+                            GridPane.columnIndex="10"
+                            GridPane.rowIndex="4"/>
+                        <ToggleButton
+                            text="E10"
+                            styleClass="seat, seat-vip"
+                            GridPane.columnIndex="11"
+                            GridPane.rowIndex="4"/>
+                        <Label text="F" styleClass="muted" GridPane.rowIndex="5"/>
+                        <ToggleButton
+                            text="F1"
+                            styleClass="seat, seat-vip"
+                            GridPane.columnIndex="1"
+                            GridPane.rowIndex="5"/>
+                        <ToggleButton
+                            text="F2"
+                            styleClass="seat, seat-vip"
+                            GridPane.columnIndex="2"
+                            GridPane.rowIndex="5"/>
+                        <ToggleButton
+                            text="F3"
+                            styleClass="seat, seat-vip"
+                            GridPane.columnIndex="3"
+                            GridPane.rowIndex="5"/>
+                        <ToggleButton
+                            text="F4"
+                            styleClass="seat, seat-vip"
+                            GridPane.columnIndex="4"
+                            GridPane.rowIndex="5"/>
+                        <ToggleButton
+                            text="F5"
+                            styleClass="seat, seat-vip"
+                            GridPane.columnIndex="5"
+                            GridPane.rowIndex="5"/>
+                        <ToggleButton
+                            text="F6"
+                            styleClass="seat, seat-vip"
+                            GridPane.columnIndex="7"
+                            GridPane.rowIndex="5"/>
+                        <ToggleButton
+                            text="F7"
+                            styleClass="seat, seat-vip"
+                            GridPane.columnIndex="8"
+                            GridPane.rowIndex="5"/>
+                        <ToggleButton
+                            text="F8"
+                            styleClass="seat, seat-vip"
+                            GridPane.columnIndex="9"
+                            GridPane.rowIndex="5"/>
+                        <ToggleButton
+                            text="F9"
+                            styleClass="seat, seat-vip"
+                            GridPane.columnIndex="10"
+                            GridPane.rowIndex="5"/>
+                        <ToggleButton
+                            text="F10"
+                            styleClass="seat, seat-vip"
+                            GridPane.columnIndex="11"
+                            GridPane.rowIndex="5"/>
+                    </GridPane>
+                    <HBox spacing="18" alignment="CENTER">
+                        <Label text="● Normal" styleClass="legend-normal"/>
+                        <Label text="● VIP" styleClass="legend-vip"/>
+                        <Label text="● Selected" styleClass="legend-selected"/>
+                        <Label text="● Booked" styleClass="muted"/>
+                    </HBox>
+                    <Label fx:id="pricesLabel" text="Normal $10.00 / VIP $15.00" styleClass="muted"/>
+                </VBox>
+                <VBox spacing="16" prefWidth="280" minWidth="260" maxWidth="280" styleClass="panel">
+                    <Label text="Your selection" styleClass="section-title"/>
+                    <ListView fx:id="selectedSeats" prefHeight="220"/>
+                    <Label text="TOTAL • USD" styleClass="eyebrow"/>
+                    <Label fx:id="totalLabel" text="\$0.00" styleClass="stat-value"/>
+                    <Button
+                        fx:id="bookButton"
+                        disable="true"
+                        text="Confirm booking"
+                        onAction="#book"
+                        maxWidth="Infinity"
+                        styleClass="primary-button"/>
+                </VBox>
+            </HBox>
+            <Label fx:id="statusLabel" wrapText="true" styleClass="status-text"/>
+        </VBox>
+    </content>
+</ScrollPane>

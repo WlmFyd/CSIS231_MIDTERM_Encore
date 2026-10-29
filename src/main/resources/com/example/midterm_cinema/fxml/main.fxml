@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane prefHeight="820" prefWidth="1240" styleClass="app-root" stylesheets="@../css/theme.css" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.midterm_cinema.controller.MainController">
+    <top>
+        <HBox alignment="CENTER_LEFT" spacing="14" styleClass="navbar">
+            <Label styleClass="brand-icon" text="▶" />
+            <Label styleClass="brand" text="encore" />
+            <Region prefWidth="20" />
+            <Button onAction="#browse" styleClass="nav-button" text="Movies" />
+            <Button onAction="#bookings" styleClass="nav-button" text="My bookings" />
+            <Button fx:id="dashboardButton" onAction="#dashboard" styleClass="nav-button" text="Dashboard" />
+            <Button fx:id="touchButton" onAction="#touchZone" styleClass="nav-button" text="Touch Zone" />
+            <Region minWidth="0.0" prefHeight="40.0" prefWidth="0.0" HBox.hgrow="ALWAYS" />
+            <Label fx:id="accountLabel" styleClass="muted" />
+            <Button fx:id="accountButton" onAction="#account" styleClass="outline-button" text="Sign in" />
+        </HBox>
+    </top>
+    <center>
+        <StackPane fx:id="viewContainer" />
+    </center>
+</BorderPane>

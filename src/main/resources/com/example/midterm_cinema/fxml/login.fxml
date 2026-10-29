@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<VBox
+    xmlns="http://javafx.com/javafx/17"
+    xmlns:fx="http://javafx.com/fxml/1"
+    spacing="17"
+    styleClass="page, app-root"
+    fx:controller="com.example.midterm_cinema.controller.LoginController"
+    stylesheets="@../css/theme.css"
+    prefWidth="440"
+    prefHeight="440">
+    <Label text="WELCOME TO ENCORE" styleClass="eyebrow"/>
+    <Label text="Your seat is waiting." styleClass="section-title"/>
+    <Label text="Sign in, or enter your details and create an account." styleClass="muted" wrapText="true"/>
+    <TextField fx:id="usernameField" promptText="Username"/>
+    <PasswordField fx:id="passwordField" promptText="Password" onAction="#signIn"/>
+    <HBox spacing="12">
+        <Button fx:id="loginButton" text="Sign in" onAction="#signIn" styleClass="primary-button"/>
+        <Button fx:id="registerButton" text="Create account" onAction="#register" styleClass="outline-button"/>
+    </HBox>
+    <Label fx:id="statusLabel" styleClass="status-text" wrapText="true"/>
+</VBox>

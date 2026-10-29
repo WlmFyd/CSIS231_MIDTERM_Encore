@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox fx:id="touchRoot" prefHeight="740.0" prefWidth="1180.0" spacing="24.0" stylesheets="@../css/theme.css" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.midterm_cinema.controller.TouchZoneController">
+   <children>
+      <HBox prefHeight="715.0" prefWidth="1108.0" spacing="10.0">
+         <children>
+            <VBox prefHeight="674.0" prefWidth="566.0" spacing="24.0">
+               <children>
+                  <HBox prefHeight="82.0" prefWidth="1008.0">
+                     <children>
+                        <VBox prefHeight="90.0" prefWidth="223.0" spacing="10.0">
+                           <children>
+                              <Label styleClass="eyebrow" text="ENCORE / CREATION" />
+                              <Label styleClass="section-title" text="Moment of creation." />
+                              <Label fx:id="statusLabel" styleClass="muted" wrapText="true" />
+                           </children>
+                        </VBox>
+                        <Region />
+                     </children>
+                  </HBox>
+                  <HBox prefHeight="120.0" prefWidth="1108.0" spacing="20.0">
+                     <children>
+                        <VBox prefHeight="120.0" prefWidth="264.0" spacing="14.0" styleClass="panel">
+                           <children>
+                              <Label styleClass="eyebrow" text="TOTAL USERS" />
+                              <Label fx:id="totalUsersLabel" styleClass="stat-value" text="—" />
+                           </children>
+                        </VBox>
+                        <VBox prefHeight="120.0" prefWidth="264.0" spacing="14.0" styleClass="panel">
+                           <children>
+                              <Label styleClass="eyebrow" text="TOTAL MOVIES" />
+                              <Label fx:id="totalMoviesLabel" styleClass="stat-value" text="—" />
+                           </children>
+                        </VBox>
+                     </children>
+                  </HBox>
+                  <HBox prefHeight="120.0" prefWidth="1108.0" spacing="20.0">
+                     <children>
+                        <VBox prefHeight="120.0" prefWidth="264.0" spacing="14.0" styleClass="panel">
+                           <children>
+                              <Label styleClass="eyebrow" text="USER ACTIONS" />
+                              <Button fx:id="createUserButton" mnemonicParsing="false" onAction="#createUser" styleClass="primary-button" text="Create User" />
+                              <Button fx:id="assignTicketButton" mnemonicParsing="false" onAction="#assignTicket" styleClass="primary-button" text="Assign Ticket" />
+                              <Button fx:id="deleteTicketButton" mnemonicParsing="false" onAction="#deleteTicket" styleClass="primary-button" text="Delete Ticket" />
+                              <Button fx:id="deleteUserButton" mnemonicParsing="false" onAction="#deleteUser" styleClass="primary-button" text="Delete User" />
+                           </children>
+                        </VBox>
+                        <VBox prefHeight="120.0" prefWidth="264.0" spacing="14.0" styleClass="panel">
+                           <children>
+                              <Label styleClass="eyebrow" text="MOVIE ACTIONS" />
+                              <Button fx:id="createMovieButton" mnemonicParsing="false" onAction="#createMovie" styleClass="primary-button" text="Create Movie" />
+                              <Button fx:id="editMovieButton" mnemonicParsing="false" onAction="#editMovie" styleClass="primary-button" text="Edit Movie" />
+                              <Button fx:id="deleteMovieButton" mnemonicParsing="false" onAction="#deleteMovie" styleClass="primary-button" text="Delete Movie" />
+                           </children>
+                        </VBox>
+                     </children>
+                  </HBox>
+               </children>
+            </VBox>
+            <VBox prefHeight="674.0" prefWidth="583.0" spacing="15.0">
+               <children>
+                  <TableView fx:id="usersTable" prefHeight="200.0" prefWidth="200.0">
+                    <columns>
+                      <TableColumn fx:id="userIdColumn" prefWidth="75.0" text="User ID" />
+                      <TableColumn fx:id="userNameColumn" prefWidth="470.0" text="Name" />
+                    </columns>
+                  </TableView>
+                  <TableView fx:id="moviesTable" prefHeight="200.0" prefWidth="200.0">
+                    <columns>
+                      <TableColumn fx:id="movieIdColumn" prefWidth="97.0" text="Movie ID" />
+                      <TableColumn fx:id="movieNameColumn" prefWidth="443.0" text="Name" />
+                    </columns>
+                  </TableView>
+                  <TableView fx:id="ticketsTable" prefHeight="200.0" prefWidth="200.0">
+                    <columns>
+                      <TableColumn fx:id="ticketColumn" prefWidth="199.0" text="Ticket" />
+                      <TableColumn fx:id="ticketUserColumn" minWidth="0.0" prefWidth="111.0" text="For User (ID)" />
+                        <TableColumn fx:id="ticketMovieColumn" prefWidth="234.0" text="For Movie (NAME)" />
+                    </columns>
+                  </TableView>
+               </children>
+            </VBox>
+         </children>
+      </HBox>
+   </children>
+   <styleClass>
+      <String fx:value="page" />
+      <String fx:value="app-root" />
+   </styleClass>
+</VBox>

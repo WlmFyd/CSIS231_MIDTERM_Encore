@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<ScrollPane
+    xmlns="http://javafx.com/javafx/17"
+    xmlns:fx="http://javafx.com/fxml/1"
+    fitToWidth="true"
+    hbarPolicy="NEVER"
+    fx:controller="com.example.midterm_cinema.controller.MovieDetailsController"
+    stylesheets="@../css/theme.css"
+    styleClass="app-root"
+    prefWidth="1180"
+    prefHeight="740">
+    <content>
+        <VBox spacing="24" styleClass="page">
+            <Button text="← All movies" onAction="#back" styleClass="nav-button"/>
+            <VBox spacing="16" styleClass="hero">
+                <Label text="YOUR NEXT MOVIE NIGHT" styleClass="eyebrow"/>
+                <Label fx:id="titleLabel" text="Movie title" styleClass="hero-title" wrapText="true"/>
+                <Label fx:id="metadataLabel" text="Genre • Duration" styleClass="muted"/>
+                <Label
+                    fx:id="synopsisLabel"
+                    text="The movie synopsis appears here."
+                    styleClass="synopsis"
+                    wrapText="true"
+                    maxWidth="760"/>
+            </VBox>
+            <VBox spacing="18" styleClass="panel">
+                <Label text="Choose your screening" styleClass="section-title"/>
+                <ComboBox fx:id="screeningChoice" maxWidth="650" prefWidth="650"/>
+                <Label
+                    fx:id="statusLabel"
+                    text="Choose a screening, then select your seats."
+                    styleClass="muted"
+                    wrapText="true"/>
+                <Button
+                    fx:id="chooseSeatsButton"
+                    text="Choose seats  →"
+                    onAction="#chooseSeats"
+                    styleClass="primary-button"/>
+            </VBox>
+        </VBox>
+    </content>
+</ScrollPane>
